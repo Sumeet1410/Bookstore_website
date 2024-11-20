@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script
+              src="https://code.jquery.com/jquery-3.7.1.js"
+              integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+              crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23CEK019</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"type="text/css"href="style.css">
+    <script>
+        $(document).ready(function()
+        {
+           $("#here").click(function()
+           {
+             prompt("Please enter mail to receive further details");
+           });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".bill").hide();
+            $("#buttonop").click(function()
+            {
+                $(".bill").show();
+            }
+
+            );
+        });
+        function bill(){
+            
+            a=parseInt(document.getElementById("num1").value);
+            b=parseInt(document.getElementById("num2").value);
+            c=parseInt(document.getElementById("num3").value);
+            d=parseInt(document.getElementById("num4").value);
+            e=parseInt(document.getElementById("num5").value);
+            f=parseInt(document.getElementById("num6").value);
+             
+            
+            
+            if(isNaN(f))
+            {
+                f=0;   
+                document.getElementById("item6").style.display="none";   }
+            
+           
+            if(isNaN(e))
+            {
+                e=0;     
+            document.getElementById("item5").style.display="none";       }
+           
+                     
+            if(isNaN(d))
+            {
+                d=0; 
+                document.getElementById("item4").style.display="none";           }
+           
+            
+            if(isNaN(c))
+            {
+                c=0;    
+                document.getElementById("item3").style.display="none";        }
+            
+            
+            if(isNaN(a))
+            {
+                a=0;   
+                document.getElementById("item1").style.display="none";         }
+            
+            
+            if(isNaN(b))
+            {
+                b=0;           
+                document.getElementById("item2").style.display="none"; }
+                
+           
+           
+            let total=a*99+b*49+c*89+d*129+e*59+f*199;
+            if(isNaN(total)||total==0)
+            {total=0;
+                document.getElementById("lastrow").style.display="none";
+                document.getElementById("row1").style.display="none";
+                document.getElementById("qrcode").style.display="none";
+                
+            }
+            document.getElementById("total").innerHTML=total;
+            
+
+
+
+            
+        }
+        function utr()
+            {
+                utr=prompt("Enter UTR number as proof of payment");
+                alert("Payment successful");
+            }
+    </script>
+    <style>
+    .tb tr td{
+    
+    width: 200px;
+    padding-top: 120px;
+    }
+    td{
+        margin: 12px;
+    }
+    .table td{
+        border: 2px solid black;
+    }
+
+    </style>
+    
+</head>
+<body >
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo">
+                  
+                </div>
+            </div>
+            
+           
+           
+        <div class="title">
+                 OM COMPLEX
+        </div>
+        <div>
+            <ul class="list" type="none">
+                <li class="li"><a href="index.html">Home</a></li>
+                <li class="li"><a href="registrationpage.html">Registration page</a></li>
+                <li class="li"><a href="chemistry.html">Chemistry</a></li>
+                <li class="li"><a href="maths.html">Maths</a></li>
+                <li class="li"><a href="BookSelling.html">BOOKS</a></li>
+
+
+            </ul>
+        </div>
+        </div>
+    </header>
+    <div class="body1"ng-app="">
+        <table class="table1 table tb">
+            <tr>
+                <td id="no1">
+                     
+                     <div>Ninja Notes</div>
+                     <div>99 <del>149</del></div>
+                     Qty:<input type="number"id="num1"style="width:30px;"ng-model="a2"class="black">
+                     
+                     
+                </td>
+                <td id="no2">
+                   
+                    <div>Concept Booster</div>
+                    <div>49 <del>109</del></div>
+                    Qty:<input type="number"id="num2"style="width:30px;"ng-model="b2"class="black">
+               </td >
+               <td id="no3">
+                
+                <div>GUJCET PYQs</div>
+                <div>89 <del>149</del></div>
+                Qty:<input type="number"id="num3"style="width:30px;"ng-model="c2"class="black">
+           </td>
+            </tr>
+            <tr>
+                <td id="no4">
+                   
+                    <div>Practice Tests</div>
+                    <div>129 <del>149</del></div>
+                    Qty:<input type="number"id="num4"style="width:30px;"ng-model="d2"class="black">
+                </td>
+                <td id="no5">
+                    
+                    <div>GUJCET CrashCourse</div>
+                    <div>59 <del>99</del></div>
+                    Qty:<input type="number"id="num5"style="width:30px;"ng-model="e2"class="black">
+               </td>
+               <td id="no6">
+               
+                     <div>NEET 2024</div>
+                     <div>199 <del>239</del></div>
+                     Qty:<input type="number"id="num6"style="width:30px;"ng-model="f2"class="black">
+           </td>
+            </tr>
+           <tr>
+            <td style="padding-top: 0px;"></td>
+            <td style="padding-top: 0px;"> <div >
+                <button onclick="bill()"id="buttonop">Generate Bill</button>
+            </div></td>
+            <td style="padding-top: 0px;"></td>
+           </tr>
+
+
+        </table>
+        <table class="bill"id="bill1">
+            <tr id="row1">
+               
+                <td>
+                    Product No.
+                </td>
+                <td>
+                    Quantity
+                </td>
+                <td>
+                    Amount
+                </td>
+            </tr>
+            <tr id="item1">
+                
+                <td>
+                    1
+                </td>
+                <td>
+                    {{a2}}   
+                </td>
+                    
+                <td id="a1">
+                    {{a2*99}}
+                </td>
+            </tr>
+            <tr id="item2">
+                
+                <td>
+                    2
+                </td>
+                <td>
+                    {{b2}}
+                </td>
+                <td id="b1">
+                    {{b2*49}}
+                </td>
+            </tr>
+            <tr id="item3">
+                
+                <td>
+                    3
+                </td>
+                <td>
+                 {{c2}}   
+                </td>
+                <td id="c1">
+                    {{c2*89}}
+                </td>
+            </tr>
+            <tr id="item4">
+
+                <td>
+                    4
+                </td>
+                <td>
+                  {{d2}}  
+                </td>
+                <td id="d1">
+                    {{d2*129}}
+                </td>
+            </tr>
+            <tr id="item5">
+                
+                <td>
+                    5
+                </td>
+                <td>
+                    {{e2}}    
+                </td>
+                <td id="e1">
+                    {{e2*59}}   
+                </td>
+            </tr>
+            <tr id="item6">
+                
+                <td>
+                    6
+                </td>
+                <td>
+                    {{f2}}
+                </td>
+                <td id="f1">
+                    {{f2*199}}
+                </td>
+            </tr>
+            <tr id="lastrow">
+                
+                <td></td>
+                <td>Total</td>
+                <td id="total"></td>
+            </tr>
+            <tr id="qrcode">
+                
+                <td >
+                    <img src="qr.jpg"style="width:200px;height:200px;">
+                    <button onclick="utr()">Enter UTR number</button>
+                </td>
+
+            </tr>
+        </table>
+    </div>

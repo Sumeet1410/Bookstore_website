@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+              src="https://code.jquery.com/jquery-3.7.1.js"
+              integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+              crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23CEK019</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"type="text/css"href="style.css">
+    <script>
+        $(document).ready(function()
+        {
+           $("#here").click(function()
+           {
+            email= prompt("Please enter mail to receive further details");
+            const regex=/^[A-Za-z\d\.]+@[\w]+.[\w\.]+$/g;
+             
+            if(regex.test(email))
+            {
+                alert("Please follow received email for further details");
+            }
+            else
+            {
+                alert("Invalid email");
+            }
+           });
+        });
+    </script>
+    
+</head>
+<body >
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo">
+                  
+                </div>
+            </div>
+           
+           
+        <div class="title">
+                 OM COMPLEX
+        </div>
+        <div>
+            <ul class="list" type="none">
+                <li class="li"><a href="index.html">Home</a></li>
+                <li class="li"><a href="registrationpage.html">Registration page</a></li>
+                <li class="li"><a href="chemistry.html">Chemistry</a></li>
+                <li class="li"><a href="maths.html">Maths</a></li>
+                <li class="li"><a href="BookSelling.html">Books</a></li>
+
+
+            </ul>
+        </div>
+        </div>
+       
+       
+    </header>
+    
+    <div class="body1 about">
+        <h1>Welcome to Om Complex!</h1>
+        <h4>The Best destination for JEE and Board preparations</h4>
+        <em>OM Complex</em> stands as a testament to the transformative power of collaboration and technology in education. Founded by a dedicated group of passionate educators, this institution is a beacon of knowledge, innovation, and accessibility. United by a common goal to transcend traditional boundaries of learning, these teachers have harnessed the capabilities of technology to disseminate education far and wide.
+
+        In an era where the world is increasingly interconnected, OM Complex recognizes the importance of leveraging digital tools to make education more inclusive and adaptable. The institution offers a diverse range of courses, each crafted with precision and care, ensuring that learners of all backgrounds can access high-quality educational content.
+        
+        What sets OM Complex apart is not only its commitment to academic excellence but also its belief in the potential of technology to enhance the learning experience. Through interactive online platforms, virtual classrooms, and multimedia resources, students are not only recipients of information but active participants in their educational journey.
+        <br><a href="">Contact US</a>
+        <br>Join us on our journey by clicking <a href=""id="here">here</a>
+
+        
+    </div>
+
+</body>
+</html>

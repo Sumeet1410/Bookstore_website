@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23Cek019</title>
+    <script>
+        function myfunc(){
+         var na="";
+          na=document.getElementById("name").value;
+          
+         
+         if(na==="")    
+         {
+            alert("Enter a name");
+         }
+         var address="";
+         address=document.getElementById("Address").value;
+         if(address==="")    
+         {
+            alert("Enter a address");
+         }
+        
+        let mobile = Number(document.getElementById("mobile").value);
+        if(mobile>9999999999 || mobile<1000000000)
+        {
+            
+            alert("Please enter a valid mobile number.");
+            document.getElementById("mobile").focus;
+        }
+    }
+    </script>
+</head>
+
+<header>
+    <div class="navbar">
+        <div class="nav-logo border">
+            <div class="logo">
+              
+            </div>
+        </div>
+       
+       
+    <div class="title">
+             OM COMPLEX
+    </div>
+    <div>
+        <ul class="list" type="none">
+            <li class="li"><a href="index.html">Home</a></li>
+            <li class="li"><a href="registrationpage.html">Registration page</a></li>
+            <li class="li"><a href="chemistry.html">Chemistry</a></li>
+            <li class="li"><a href="maths.html">Maths</a></li>
+            <li class="li"><a href="BookSelling.html">Books</a></li>
+
+
+        </ul>
+    </div>
+    </div>
+   
+   
+</header>
+    <div class=" body1 ">
+    <div class="heading">Please register yourself by filling your details in the following form</div>
+     <form>
+        <table id="reg">
+          <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <input type="text" id="name">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                Mobile no:
+            </td>
+            <td>
+                <input type="number"id="mobile">
+            </td>
+          </tr>
+          <tr>
+            <td>
+               Address:
+            </td>
+            <td>
+                <textarea id="Address"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Board:
+            </td>
+            <td>
+                <select name="board" id="board"style="color:black">
+                    <option value="GSEB">GSEB</option>
+                    <option value="CBSE">CBSE</option>
+                    <option value="ICSE">ICSE</option>
+                    <option value="Other">Other</option>
+                  </select>
+            </td>
+          </tr>
+        </table>
+       <button onclick="myfunc()">SUBMIT</button>
+    </form>
+</div>
+</body>
+</html>

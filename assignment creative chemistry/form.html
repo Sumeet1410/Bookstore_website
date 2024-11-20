@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunc()
+        {
+            name=document.getElementById("name").value;
+        const regex=/^(A-Za-z@\d)+$/g;
+        if(regex.test(name))
+        {
+            alert(name);
+        }
+        else{
+            alert("name");
+        }
+        
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="name">NAME:</label>
+        <input type="text"id="name">
+        <button type="submit"onclick="myfunc()">SUBMIT</button>
+        
+    </form>
+</body>
+</html>

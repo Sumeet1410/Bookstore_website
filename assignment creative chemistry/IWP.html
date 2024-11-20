@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+              src="https://code.jquery.com/jquery-3.7.1.js"
+              integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+              crossorigin="anonymous"></script>
+              <script>
+                $(document).ready(function()
+                {
+                    $("#showit2").hide();
+                    $("#hideit").click(function()
+                    {
+                        $("#hideit").hide(1000);
+                    });
+                    $("#showit").mouseenter(function()
+                    {
+                        $("#showit2").show(1000);
+                    });
+                    $("#showit").mouseleave(function()
+                    {
+                        $("#showit2").hide(1000);
+                    });
+                    $("#toggleit").hover(function()
+                    {
+                        $("#toggleit2").toggle();
+                    });
+                    $("#fadeit").click(function()
+                    {
+                        $("#fadeit2").fadeIn("slow");
+
+                });
+                $("#fadeitout").click(function()
+                    {
+                        $("#fadeit2").fadeOut("slow");
+
+                });
+                $("#slideitdown").click(function()
+                    {
+                        $("#slideitdown2").slideDown("slow");
+                    });
+                    $("#animate").keydown(function()
+                    {
+                        $("#animate2").animate({left:'120px',opacity:'0.5',height:'300px',width:'12px'  
+                                                });
+                    });
+            });
+              </script>
+</head>
+<body>
+    <h1>THIS PRACTICAL IS TO DEMONSTRATE JQUERY EVENTS AND EFFECTS</h1><hr>
+    <div id="hideit">
+        This div will be hidden on clicking
+    </div>
+    <hr>
+    <div id="showit2">
+        Here it is!
+    </div>
+    <div><button id="showit">Show</button></div><hr>
+    <div id="toggleit2">
+        Here it is!
+    </div>
+    <div><button id="toggleit">Toggle</button></div><hr>
+    <div id="fadeit2"style="height: 100px;width: 100px;background-color:red;display:none;"></div>
+    <div><button id="fadeit">FadeIn</button></div>
+    <div><button id="fadeitout">FadeOut</button></div><hr>
+    <div><button id="slideitdown">slide down</button></div>
+    <div id="slideitdown2"style="display:none;">This would slidedown</div><hr>
+   <h4>Type in the box below to see animation</h4>
+   <input type="text" id="animate">
+    <div id="animate2"style="height: 100px;width: 100px;background-color:red;position: absolute;"></div>
+    
+</body>
+</html>

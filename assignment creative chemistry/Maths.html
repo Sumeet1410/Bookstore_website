@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23Cek019</title>
+    <script
+              src="https://code.jquery.com/jquery-3.7.1.js"
+              integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+              crossorigin="anonymous"></script>
+    <script>
+        $("document").ready(function()
+        {
+            $(".hide").hide();
+           $("#ch1").click(function()
+           {
+            $(".hide").hide();
+            $("#show-1").show();
+           }
+           );
+
+           $("#ch2").click(function()
+           {
+            $(".hide").hide();
+            $("#show-2").show();
+           }
+           );
+           $("#ch3").click(function()
+           {
+            $(".hide").hide();
+            $("#show-3").show();
+           }
+           );
+           $("#ch4").click(function()
+           {
+            $(".hide").hide();
+            $("#show-4").show();
+           }
+           );
+           
+           $("#q1").focus(function()
+           {
+            $(".unsolved").hide();
+           });
+        }
+        );
+        </script>
+        <script>
+        
+    let sumf = 0, sumxf = 0, sumcf = 0, i = 0, sumfx2 = 0;
+    // let choice = prompt("Enter the type of que from 1 to 4");
+    let lower = [];
+    let upper = [];
+    let x = [];
+    let dev = [];
+    let fre = [];
+    function cal1(){
+        let n1 = prompt("Enter the number of classes");
+            for (let j = 0; j < n1; j++) {
+                lower[j] = prompt("Enter Lower limit");
+                upper[j] = prompt("Enter Upper limit");
+                fre[j]=prompt("Enter the frequency");
+                x[j] = (upper[j] / 2) + (lower[j] / 2);
+                sumxf = sumxf + x[j] * fre[j];
+                sumf = sumf + fre[j]*1;
+            }
+            let mean = sumxf / sumf;
+            alert(sumf);
+           
+
+    }
+    function cal2(){
+        let n2 = prompt("Enter the number of classes");
+            for (let j = 0; j < n2; j++) {
+                lower[j] = prompt("Enter Lower limit");
+                upper[j] = prompt("Enter Upper limit");
+                fre[j]=prompt("Enter the frequency");
+                x[j] = (upper[j] / 2) + (lower[j] / 2);
+                sumxf = sumxf + x[j] * fre[j];
+                sumf = sumf + fre[j]*1;
+            }
+
+            for (let j = 0; sumcf < sumf / 2; j++) {
+                sumcf = sumcf + fre[j];
+            }
+            j--;
+            sumcf = sumcf - fre[j];
+            let h = upper[j] - lower[j];
+            let median = lower[j] + (sumf / 2 - sumcf) * h / fre[j];
+            alert(median);
+
+    }
+    function cal3(){
+        let n3 = prompt("Enter the number of classes");
+            for (let j = 0; j < n3; j++) {
+                lower[j] = prompt("Enter Lower limit");
+                upper[j] = prompt("Enter Upper limit");
+                fre[j]=prompt("Enter the frequency");
+                x[j] = (upper[j] / 2) + (lower[j] / 2);
+                sumxf = sumxf + x[j] * fre[j];
+                sumf = sumf + fre[j]*1;
+            }
+            let max = 0;
+            for (let j = 0; j < n3; j++) {
+                if (fre[j] > fre[max]) {
+                    max = j;
+                }
+            }
+            h = upper[max] - lower[max];
+            let mode = lower[max] + (fre[max] - fre[max - 1]) * h / (2.0 * fre[max] - fre[max - 1] - fre[max + 1]);
+            alert(mode);
+
+    }
+    function cal4(){
+        let n4 = prompt("Enter the number of classes");
+            for (let j = 0; j < n4; j++) {
+                lower[j] = prompt("Enter Lower limit");
+                upper[j] = prompt("Enter Upper limit");
+                fre[j]=prompt("Enter the frequency");
+                x[j] = (upper[j] / 2) + (lower[j] / 2);
+                sumxf = sumxf + x[j] * fre[j];
+                sumf = sumf + fre[j]*1;
+            }
+            let mean4 = sumxf / sumf;
+            for (let j = 0; j < n4; j++) {
+                dev[j] = mean4 - x[j];
+                sumfx2 = sumfx2 + dev[j] * dev[j] * fre[j];
+            }
+            let variance = sumfx2 / (sumf - 1);
+            alert(variance);
+
+    }
+   </script>
+</head>
+
+<header>
+    <div class="navbar">
+        <div class="nav-logo border">
+            <div class="logo">
+              
+            </div>
+        </div>
+       
+       
+    <div class="title">
+             OM COMPLEX
+    </div>
+    <div>
+        <ul class="list" type="none">
+            <li class="li"><a href="index.html">Home</a></li>
+            <li class="li"><a href="registrationpage.html">Registration page</a></li>
+            <li class="li"><a href="chemistry.html">Chemistry</a></li>
+            <li class="li"><a href="maths.html">Maths</a></li>
+            <li class="li"><a href="BookSelling.html">BOOKS</a></li>
+
+
+        </ul>
+    </div>
+    </div>
+   
+   
+</header>
+    <div class="body1">
+        <table>
+            <tr>
+                <td>
+                    <ol>
+                        <li id="ch1"class="ch_title">Statistics</li>
+                        <li id="ch2"class="ch_title">Probability</li>
+                        <li id="ch3"class="ch_title">AP and GP</li>
+                        <li id="ch4"class="ch_title">Permutation And Combination</li>
+                        
+                    </ol>
+                </td>
+                <td>
+                    <div class="hide" id="show-1">
+                        CH-1 : Statistics Calculator 
+                        <div>Statistics has been Very useful in studying large and varied data. The following are some topics and calculatos to find answers for examples.
+                        The following are the four important statistics topics.You can click any of the topics to get a calculator for the topic:</div>
+                        <ol>
+                            <li onclick="cal1()">Mean Of Grouped Data</li>
+                            <li onclick="cal2()">Median Of Grouped Data</li>
+                            <LI onclick="cal3()">Mode Of grouped data</LI>
+                            <li onclick="cal4()">Standard Deviation</li>
+                            
+                        </ol>
+                        </div>
+                        <div class="hide" id="show-2">
+                        CH-2 : Probability
+                        <div>Probability is a branch of mathematics that quantifies uncertainty and randomness. It provides a formal framework for expressing and analyzing the likelihood of different outcomes in uncertain situations. At its core, probability deals with the study of events and their likelihood of occurrence, ranging from the flip of a coin to complex statistical analyses. The fundamental concept is represented by a number between 0 and 1, where 0 indicates impossibility, 1 denotes certainty, and values in between express degrees of likelihood. Probability theory serves as a crucial tool in various fields, including statistics, finance, science, and artificial intelligence, enabling the modeling and understanding of uncertain events and helping decision-makers make informed choices in the face of uncertainty.
+                            The followinng are some important concepts:
+                            <ol>
+                                <li>Poisson Distribution</li>
+                                <li>Random Variabke</li>
+                                <li>Bayes Theorem</li>
+                                <li>Conditional Probability</li>
+                            </ol>
+                        </div>
+                        </div>
+                        <div class="hide" id="show-3">
+                            CH-3 : AP And GP
+                            <div>Arithmetic progression (AP) and geometric progression (GP) are fundamental concepts in mathematics, specifically in the realm of sequences. An arithmetic progression is a sequence of numbers in which the difference between any two consecutive terms remains constant. This common difference allows for a straightforward linear pattern, making arithmetic progressions particularly useful in modeling scenarios where quantities increase or decrease by a fixed amount. On the other hand, a geometric progression is a sequence where each term is obtained by multiplying the preceding one by a constant factor known as the common ratio. This results in an exponential growth or decay pattern, often found in situations involving compound interest, population growth, or geometric shapes. Both arithmetic and geometric progressions play pivotal roles in diverse mathematical applications, from finance and physics to computer science and engineering.
+                                The followinng are some important concepts:
+                                <ol>
+                                    <li>Arithmetic Progression</li>
+                                    <li>Geometric Progression</li>
+                                    <li>Special strategies</li>
+                                    
+                                </ol>
+                            </div>
+                            </div>
+                            <div class="hide" id="show-4">
+                                CH-4 : Permutations And Combinations
+                                <div>Permutations and combinations are fundamental concepts in combinatorics, addressing the ways in which elements can be arranged or selected from a set. Permutations refer to the distinct arrangements of a set of objects, where the order of arrangement matters. For example, the different ways in which a set of letters can be arranged to form distinct words. Combinations, on the other hand, focus on the selection of objects from a set without considering the order. It deals with the number of ways to choose a subset from a larger set, such as picking a group of students from a class without regard to their specific seating arrangement. Permutations involve arrangements, while combinations involve selections, and both concepts have widespread applications in probability, statistics, and various fields where counting and arrangement are essential.
+                                    <ol>
+                                        <li>Permutations</li>
+                                        <li>combinations</li>
+                                        <li>Word Problems</li>
+                                        
+                                    </ol>
+                                </div>
+                                </div>
+                </td> 
+                
+    </div>
